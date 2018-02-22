@@ -1,22 +1,26 @@
-#Bugdevelop
+# Bugdevelop
 A minimal project to illustrate bugs in Kdevelop
-##Bug 1
-loger_Test.cpp:11 destroyInst() method is not reckognized as part of Loger class 
+## Bug 1
+**loger_Test.cpp:11 destroyInst()** method is not reckognized as part of Loger class 
 
-##Bug 2 
-loger_Test.cpp:20 getInst() method is not reckognized as part of Loger class 
+## Bug 2 
+**loger_Test.cpp:20 getInst()** method is not reckognized as part of Loger class 
 
-##Bug 3
+## Bug 3
 Activate the debug message of the cmake plugin in kdedebugsettings and you will see 
-
+```
 kdevelop.plugins.cmake: cmake read error. could not read  "/home/max/Projects/Test_projects/Bugdevelop/build/CTestTestfile.cmake"
-
+```
 which is logical since this file is in build/Tests/ as expected (and not in build/  !)
-if you mv build/Tests/CTestTestfile.cmake build/CTestTestfile.cmake and close-reopen kdevelop it will be able to read and you will see the test appearing in the unit test pane of Kdevelop (:) )
+if you 
+```
+mv build/Tests/CTestTestfile.cmake build/CTestTestfile.cmake
+```
+and close-reopen kdevelop it will be able to read and you will see the test appearing in the unit test pane of Kdevelop (:) )
 
-##Bug 4 
+## Bug 4 
 You will also see this (somehow a bad call to cmake)
-
+```
 kdevelop.plugins.cmakebuilder: Added builder  MakeBuilder for "Makefile"
 CMake Error: cmake version 3.5.1
 Usage: /usr/bin/cmake -E <command> [arguments...]
@@ -47,8 +51,8 @@ Available on UNIX only:
 
 qrc:///qml/storage.js:24: TypeError: Cannot call method 'openDatabaseSync' of undefined
 kdevelop.plugins.cmake: cmake server finished with code 1
-
-##Bug 5
+```
+## Bug 5
 
 
 
