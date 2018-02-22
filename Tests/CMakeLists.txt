@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 2.8.11)
 enable_testing()
+set(CMAKE_AUTOMOC ON)
+
 add_compile_options(-std=c++11)
 
 set (LOGLIBTEST "loglibTEST")
@@ -20,6 +22,6 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 #loglibtest
 add_executable (${LOGLIBTEST} ${LOGLIBSRC_TEST} ${LOGLIBHDR})
-target_link_libraries(${LOGLIBTEST} Bugdevelop ${Qt5Test_LIBRARIES} ${Qt5Core_LIBRARIES} )
 add_test(NAME ${LOGLIBTEST} COMMAND ${LOGLIBTEST})
+target_link_libraries(${LOGLIBTEST} Bugdevelop ${Qt5Test_LIBRARIES} ${Qt5Core_LIBRARIES} )
 
