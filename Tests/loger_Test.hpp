@@ -1,6 +1,6 @@
 #ifndef LOGER_TEST_HPP
 #define LOGER_TEST_HPP
-#include <qt5/QtTest/QTest>
+#include <QTest>
 
 #include "loger.hpp"
 

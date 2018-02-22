@@ -1,12 +1,15 @@
 # Bugdevelop
 A minimal project to illustrate bugs in Kdevelop
-## Bug 1
+## Bug 1 
+**Might be due to CMake version <3.10 (ubuntu 16.04)**
 **loger_Test.cpp:11 destroyInst()** method is not reckognized as part of Loger class 
 
 ## Bug 2 
+**Might be due to CMake version <3.10 (ubuntu 16.04)**
 **loger_Test.cpp:20 getInst()** method is not reckognized as part of Loger class 
 
 ## Bug 3
+**Might be due to CMake version <3.10 (ubuntu 16.04)**
 Activate the debug message of the cmake plugin in kdedebugsettings and you will see 
 ```
 kdevelop.plugins.cmake: cmake read error. could not read  "/home/max/Projects/Test_projects/Bugdevelop/build/CTestTestfile.cmake"
@@ -19,6 +22,7 @@ mv build/Tests/CTestTestfile.cmake build/CTestTestfile.cmake
 and close-reopen kdevelop it will be able to read and you will see the test appearing in the unit test pane of Kdevelop (:) )
 
 ## Bug 4 
+**Might be due to CMake version <3.10 (ubuntu 16.04)**
 You will also see this (somehow a bad call to cmake)
 ```
 kdevelop.plugins.cmakebuilder: Added builder  MakeBuilder for "Makefile"
