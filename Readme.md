@@ -1,15 +1,13 @@
 # Bugdevelop
-A minimal project to illustrate bugs in Kdevelop
+A minimal project to illustrate bugs in Kdevelop 
+None of those are related to a too old cmake version (current version is 3.11)
 ## Bug 1 
-**Might be due to CMake version <3.10 (ubuntu 16.04)**
 **loger_Test.cpp:11 destroyInst()** method is not reckognized as part of Loger class 
 
 ## Bug 2 
-**Might be due to CMake version <3.10 (ubuntu 16.04)**
 **loger_Test.cpp:20 getInst()** method is not reckognized as part of Loger class 
 
 ## Bug 3
-**Might be due to CMake version <3.10 (ubuntu 16.04)**
 Activate the debug message of the cmake plugin in kdedebugsettings and you will see 
 ```
 kdevelop.plugins.cmake: cmake read error. could not read  "/home/max/Projects/Test_projects/Bugdevelop/build/CTestTestfile.cmake"
@@ -22,41 +20,31 @@ mv build/Tests/CTestTestfile.cmake build/CTestTestfile.cmake
 and close-reopen kdevelop it will be able to read and you will see the test appearing in the unit test pane of Kdevelop (:) )
 
 ## Bug 4 
-**Might be due to CMake version <3.10 (ubuntu 16.04)**
 You will also see this (somehow a bad call to cmake)
 ```
-kdevelop.plugins.cmakebuilder: Added builder  MakeBuilder for "Makefile"
-CMake Error: cmake version 3.5.1
-Usage: /usr/bin/cmake -E <command> [arguments...]
-Available commands: 
-  chdir dir cmd [args...]   - run command in a given directory
-  compare_files file1 file2 - check if file1 is same as file2
-  copy <file>... destination  - copy files to destination (either file or directory)
-  copy_directory <dir>... destination   - copy content of <dir>... directories to 'destination' directory
-  copy_if_different <file>... destination  - copy files if it has changed
-  echo [<string>...]        - displays arguments as text
-  echo_append [<string>...] - displays arguments as text but no new line
-  env [--unset=NAME]... [NAME=VALUE]... COMMAND [ARG]...
-                            - run command in a modified environment
-  environment               - display the current environment
-  make_directory <dir>...   - create parent and <dir> directories
-  md5sum <file>...          - compute md5sum of files
-  remove [-f] <file>...     - remove the file(s), use -f to force it
-  remove_directory dir      - remove a directory and its contents
-  rename oldname newname    - rename a file or directory (on one volume)
-  tar [cxt][vf][zjJ] file.tar [file/dir1 file/dir2 ...]
-                            - create or extract a tar or zip archive
-  sleep <number>...         - sleep for given number of seconds
-  time command [args...]    - run command and return elapsed time
-  touch file                - touch a file.
-  touch_nocreate file       - touch a file but do not create it.
-Available on UNIX only:
-  create_symlink old new    - create a symbolic link new -> old
-
-qrc:///qml/storage.js:24: TypeError: Cannot call method 'openDatabaseSync' of undefined
-kdevelop.plugins.cmake: cmake server finished with code 1
+kdevelop.plugins.cmake: Error while parsing: "project" at 3
+kdevelop.plugins.cmake: Executing: "cmake" :: ("--help-command-list")
+kdevelop.plugins.cmake: Error while parsing: "set" at 7
 ```
-## Bug 5
+
+
+## Note on version 
+```
+uname -a
+Linux zalman 4.13.0-36-generic #40~16.04.1-Ubuntu SMP Fri Feb 16 23:25:58 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+```
+```
+plasmashell --version
+plasmashell 5.12.2
+```
+```
+kdevelop --version
+kdevelop 5.2.1
+```
+
+
+
+
 
 
 
